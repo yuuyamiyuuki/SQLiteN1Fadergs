@@ -3,5 +3,9 @@
     <string name="FormName">Your Name</string>
     <string name="FormNumber">Your Number</string>
     <string name="CurrentlyEmployed">Currently Employed</string>
+    <string name="AddButton">Add</string>
+    <string name="ViewAllButton">View All</string>
+    <string name="AddOneButton">Add One</string>
+    <string name="GoBackButton">Go Back</string>
     <string name="SimpleTitle">Simple Form Viewer</string>
 </resources>

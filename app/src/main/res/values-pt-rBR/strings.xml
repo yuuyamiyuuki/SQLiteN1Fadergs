@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Formulario Simples</string>
+    <string name="FormName">Seu nome</string>
+    <string name="FormNumber">Seu numero</string>
+    <string name="CurrentlyEmployed">Empregado</string>
+    <string name="AddButton">Adicionar</string>
+    <string name="ViewAllButton">Vizualizar todos</string>
+    <string name="AddOneButton">Adicionar novo</string>
+    <string name="GoBackButton">Voltar</string>
+    <string name="SimpleTitle">Vizualizador Simples de Formulario</string>
+</resources>

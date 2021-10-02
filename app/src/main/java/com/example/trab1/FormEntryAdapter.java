@@ -59,15 +59,16 @@ public class FormEntryAdapter extends RecyclerView.Adapter<FormEntryAdapter.View
     public void onBindViewHolder(FormEntryAdapter.ViewHolder holder, @SuppressLint("RecyclerView") int position) {
         holder.formName.setText(entries.get(position).getName());
         holder.formNumber.setText(entries.get(position).getNumber());
-        holder.formEmployed.setText(entries.get(position).isEmployed() ? "Y" : "N");
+        holder.formEmployed.setText(holder.formEmployed.getText() + ":" + (entries.get(position).isEmployed() ? "Y" : "N"));
         holder.btnDelete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 try {
                     DAO dao = new DAO(context);
                     dao.deleteOne((entries.get(position).getId()));
+                    entries.remove((entries.get(position)));
+                    notifyItemRemoved(position);
                     Toast.makeText(context, "Deleted with success.", Toast.LENGTH_SHORT).show();
-                    entries = dao.getAll();
                 }
                 catch(Exception e){
                     Toast.makeText(context, "Failure to delete.", Toast.LENGTH_SHORT).show();
